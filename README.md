@@ -4,6 +4,8 @@ Android Search Match HanziPinyin
 
 Android Hanzi Pinyin Matcher
 
+Support for simple matching
+Support multi-tone matching
 
  ## License
 
