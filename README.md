@@ -7,15 +7,17 @@ Android Hanzi Pinyin Matcher
 Support for simple matching
 Support multi-tone matching
 
- 这是一个简单的算法,实现了多连首字母索引,可用于任意拼音/T9匹配,如文件索引,联系人索引等等需要用到汉字的App
- 这个实现是有协定的,并且与本人修改的HanziToPinyin类相互协作完成.
+
+ This is a simple algorithm that implements multiple initial indexing and can be used for any Pinyin/T9 matching, such as file indexing, contact indexing, etc.
+  This implementation is contractual and works with the HanziToPinyin class I modified.
  
  <pre>
- 协定: 保证所有代入的字符为大写
+ Agreement: Ensure that all substituted characters are capitalized
  </pre>
-
+ 
+## Version 0.2
  <pre>
- 0.2 版本更新内容: 支持了多音字筛选
+ Version update content: Support for multi-tone word filtering
  </pre>
 
  ## License
