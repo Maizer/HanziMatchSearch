@@ -9,7 +9,7 @@ Support multi-tone matching
 
 
  This is a simple algorithm that implements multiple initial indexing and can be used for any Pinyin/T9 matching, such as file indexing, contact indexing, etc.
-  This implementation is contractual and works with the [HanziToPinyin](https://github.com/Maizer/HanziToPinyin) class I modified.
+  This implementation is contractual and works with the [HanziToPinyin](https://github.com/Maizer/HanziToPinyin) class.
  
  <pre>Agreement: Ensure that all substituted characters are capitalized</pre>
  
