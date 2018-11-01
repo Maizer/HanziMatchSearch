@@ -1,18 +1,18 @@
 package com.lettersearch.core;
 
 /**
- * ÕâÊÇÒ»¸ö¼òµ¥µÄËã·¨,ÊµÏÖÁË¶àÁ¬Ê××ÖÄ¸Ë÷Òı,¿ÉÓÃÓÚÈÎÒâÆ´Òô/T9Æ¥Åä,ÈçÎÄ¼şË÷Òı,ÁªÏµÈËË÷ÒıµÈµÈĞèÒªÓÃµ½ºº×ÖµÄApp
- * Õâ¸öÊµÏÖÊÇÓĞĞ­¶¨µÄ,²¢ÇÒÓë±¾ÈËĞŞ¸ÄµÄHanziToPinyinÀàÏà»¥Ğ­×÷Íê³É.
+ * è¿™æ˜¯ä¸€ä¸ªç®€å•çš„ç®—æ³•,å®ç°äº†å¤šè¿é¦–å­—æ¯ç´¢å¼•,å¯ç”¨äºä»»æ„æ‹¼éŸ³/T9åŒ¹é…,å¦‚æ–‡ä»¶ç´¢å¼•,è”ç³»äººç´¢å¼•ç­‰ç­‰éœ€è¦ç”¨åˆ°æ±‰å­—çš„App
+ * è¿™ä¸ªå®ç°æ˜¯æœ‰åå®šçš„,å¹¶ä¸”ä¸æœ¬äººä¿®æ”¹çš„HanziToPinyinç±»ç›¸äº’åä½œå®Œæˆ.
  * 
  * <pre>
- * Ğ­¶¨: ±£Ö¤ËùÓĞ´úÈëµÄ×Ö·ûÎª´óĞ´
+ * åå®š: ä¿è¯æ‰€æœ‰ä»£å…¥çš„å­—ç¬¦ä¸ºå¤§å†™
  * </pre>
  * 
  * <pre>
- *  0.2 °æ±¾¸üĞÂÄÚÈİ: Ö§³ÖÁË¶àÒô×ÖÉ¸Ñ¡
+ *  0.2 ç‰ˆæœ¬æ›´æ–°å†…å®¹: æ”¯æŒäº†å¤šéŸ³å­—ç­›é€‰
  * </pre>
  * 
- * @author Andme
+ * @author Maizer
  * @version 0.2
  * @category search,arithmetic
  */
@@ -21,11 +21,11 @@ public class JavaSearchCore {
 	private static final String TAG = JavaSearchCore.class.getSimpleName();
 
 	/**
-	 * ËÑË÷¶àÒô×ÖËã·¨
+	 * æœç´¢å¤šéŸ³å­—ç®—æ³•
 	 * 
 	 * @param source
-	 *            ÕâÊÇÓĞË³ĞòµÄ,ÀıÈç:Áõ²Ø -> ºº×Ö [LIU,ZANG CANG]-> Æ´Òô,,ÎÒÒÑ¾­¾ßÌåÊµÏÖ,²Î¿¼
-	 *            {@link HanziToPinyin}Àà
+	 *            è¿™æ˜¯æœ‰é¡ºåºçš„,ä¾‹å¦‚:åˆ˜è— -> æ±‰å­— [LIU,ZANG CANG]-> æ‹¼éŸ³,,æˆ‘å·²ç»å…·ä½“å®ç°,å‚è€ƒ
+	 *            {@link HanziToPinyin}ç±»
 	 * @param input
 	 * @param colors
 	 * @return
@@ -45,13 +45,13 @@ public class JavaSearchCore {
 		int sourcechars_length = sourcechars.length;
 
 		A: while (inputIndex > -1 && inputIndex < inputjarray_length && sourceLetter < source_length) {
-			// ÓÃÀ´¼ì²â¿Õ×Ö·û
+			// ç”¨æ¥æ£€æµ‹ç©ºå­—ç¬¦
 			if (sourcechars_length == 1 && sourcechars[0] == ' ') {
 				sourceLetter++;
 				if (sourceLetter >= source_length) {
 					break;
 				}
-				// ÓÉÓÚµ×²ãµÄ½á¹¹,ÎªÁË½«ÄÚ´æ½µµ½×îµÍ
+				// ç”±äºåº•å±‚çš„ç»“æ„,ä¸ºäº†å°†å†…å­˜é™åˆ°æœ€ä½
 				source_element = source[sourceLetter].toString();
 				sourcechars = source_element.toCharArray();
 				sourcechars_length = sourcechars.length;
@@ -156,7 +156,7 @@ public class JavaSearchCore {
 	}
 
 	/**
-	 * ¾«×¼:ÆÕÍ¨ËÑË÷Ëã·¨
+	 * ç²¾å‡†:æ™®é€šæœç´¢ç®—æ³•
 	 * 
 	 * @param source
 	 * @param input
@@ -181,7 +181,7 @@ public class JavaSearchCore {
 					break;
 				}
 				sourcebyte_carray = source[sourceLetter].toString().toCharArray();
-				// ÒÔÉÏ´Ë´¦¿ÉÑ¡,Ö»ÊÇÓÃÀ´¼ì²âÎª¿ÕµÄ×Ö·û
+				// ä»¥ä¸Šæ­¤å¤„å¯é€‰,åªæ˜¯ç”¨æ¥æ£€æµ‹ä¸ºç©ºçš„å­—ç¬¦
 			} else if (inputbyte_carray[inputIndex] == sourcebyte_carray[letterIndex]) {
 				letterIndex++;
 				inputIndex++;
