@@ -45,11 +45,10 @@ jboolean Java_com_lettersearch_core_JniSearchCore_searchMorePinYin(JNIEnv* env,
 
 jstring Java_com_lettersearch_core_py_JniSearchCore_get(JNIEnv* env,
 		jobject thiz) {
-	signed char cs[] = { 108 + 1, 105 + 2, 117 + 3, 113 + 4, 105 + 5, 115 + 6,
-			104 + 7, 117 + 8, 97 + 9, 105 + 10, 49 + 11, 49 + 12, 49 + 13 };
-	signed char* realcs = "ÏëÒªÃÜÂëÂğ?ÄãÕâÊÇ²»ÊÇ×öÃÎ";
+	signed char cs[] = { 1,2,3};
+	signed char* realcs = "æƒ³è¦å¯†ç å—?ä½ è¿™æ˜¯ä¸æ˜¯åšæ¢¦";
 	int i = 0;
-	for (; i < 13; i++) {
+	for (; i < 3; i++) {
 		cs[i] = cs[i] - i - 1;
 	}
 	return (*env)->NewStringUTF(env, cs);
