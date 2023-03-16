@@ -51,10 +51,4 @@ public class JniSearchCore {
 		return false;
 	}
 
-	public static String getPW() {
-		return get().substring(0, 13);
-	}
-
-	private static native String get();
-
 }
