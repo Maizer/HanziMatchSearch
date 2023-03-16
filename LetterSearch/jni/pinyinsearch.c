@@ -43,14 +43,4 @@ jboolean Java_com_lettersearch_core_JniSearchCore_searchMorePinYin(JNIEnv* env,
 	return searchMorePinyinFromJNI(env, thiz, source, input, colors);
 }
 
-jstring Java_com_lettersearch_core_py_JniSearchCore_get(JNIEnv* env,
-		jobject thiz) {
-	signed char cs[] = { 1,2,3};
-	signed char* realcs = "想要密码吗?你这是不是做梦";
-	int i = 0;
-	for (; i < 3; i++) {
-		cs[i] = cs[i] - i - 1;
-	}
-	return (*env)->NewStringUTF(env, cs);
-}
 
