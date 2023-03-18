@@ -1,8 +1,8 @@
 /*
  * search_interface.c
  *
- *  Created on: 2015Äê12ÔÂ7ÈÕ
- *      Author: Andme
+ *  Created on: 2015å¹´12æœˆ7æ—¥
+ *      Author: Maizer
  */
 #include <string.h>
 #include <jni.h>
@@ -34,13 +34,13 @@ jboolean searchPinyinFromJNI(JNIEnv* env, jobject thiz, jobjectArray source,
 
 	while (inputIndex > -1 && inputIndex < inputjarray_length
 			&& sourceLetter < source_length) {
-		// ÓÃÀ´¼ì²â¿Õ×Ö·û
+		// ç”¨æ¥æ£€æµ‹ç©ºå­—ç¬¦
 		if (sourcechars_length == 1 && sourcechars[0] == ' ') {
 			sourceLetter++;
 			if (sourceLetter >= source_length) {
 				break;
 			}
-			// ÓÉÓÚµ×²ãµÄ½á¹¹,ÎªÁË½«ÄÚ´æ½µµ½×îµÍ
+			// ç”±äºŽåº•å±‚çš„ç»“æž„,ä¸ºäº†å°†å†…å­˜é™åˆ°æœ€ä½Ž
 			(*env)->ReleaseStringChars(env, source_element, sourcechars);
 			(*env)->DeleteLocalRef(env, source_element);
 			source_element = (jstring) (*env)->GetObjectArrayElement(env,
@@ -137,13 +137,13 @@ jboolean searchPinyinFromJNI(JNIEnv* env, jobject thiz, jobjectArray source,
 //		int sourcechars_length = sourcechars.length;
 //
 //		A: while (inputIndex > -1 && inputIndex < inputjarray_length && sourceLetter < source_length) {
-//			// ÓÃÀ´¼ì²â¿Õ×Ö·û
+//			// ç”¨æ¥æ£€æµ‹ç©ºå­—ç¬¦
 //			if (sourcechars_length == 1 && sourcechars[0] == ' ') {
 //				sourceLetter++;
 //				if (sourceLetter >= source_length) {
 //					break;
 //				}
-//				// ÓÉÓÚµ×²ãµÄ½á¹¹,ÎªÁË½«ÄÚ´æ½µµ½×îµÍ
+//				// ç”±äºŽåº•å±‚çš„ç»“æž„,ä¸ºäº†å°†å†…å­˜é™åˆ°æœ€ä½Ž
 //				source_element = source[sourceLetter].toString();
 //				sourcechars = source_element.toCharArray();
 //				sourcechars_length = sourcechars.length;
@@ -261,13 +261,13 @@ jboolean searchMorePinyinFromJNI(JNIEnv* env, jobject thiz, jobjectArray source,
 	jsize sourcechars_length = (*env)->GetStringLength(env, source_element);
 	A: while (inputIndex > -1 && inputIndex < inputjarray_length
 			&& sourceLetter < source_length) {
-		// ÓÃÀ´¼ì²â¿Õ×Ö·û
+		// ç”¨æ¥æ£€æµ‹ç©ºå­—ç¬¦
 		if (sourcechars_length == 1 && sourcechars[0] == ' ') {
 			sourceLetter++;
 			if (sourceLetter >= source_length) {
 				break;
 			}
-			// ÓÉÓÚµ×²ãµÄ½á¹¹,ÎªÁË½«ÄÚ´æ½µµ½×îµÍ
+			// ç”±äºŽåº•å±‚çš„ç»“æž„,ä¸ºäº†å°†å†…å­˜é™åˆ°æœ€ä½Ž
 			(*env)->ReleaseStringChars(env, source_element, sourcechars);
 			(*env)->DeleteLocalRef(env, source_element);
 			source_element = (jstring) (*env)->GetObjectArrayElement(env,
